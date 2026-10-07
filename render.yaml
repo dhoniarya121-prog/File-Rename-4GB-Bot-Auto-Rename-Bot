@@ -1,87 +1,53 @@
-# ═══════════════════════════════════════════════════════════════
-# 𝕽𝕺𝕏𝖄•𝔹𝕒𝕤𝕚𝕔ℕ𝕖𝕖𝕕𝔹𝕠𝕥 ⚡️
-# Created by: RoxyBasicNeedBot
-# GitHub: https://github.com/RoxyBasicNeedBot
-# Telegram: https://t.me/roxybasicneedbot1
-# Website: https://roxybasicneedbot.unaux.com/?i=1
-# YouTube: @roxybasicneedbot
-#
-# Portfolio: https://aratt.ai/@roxybasicneedbot
-#
-# Bot & Website Developer 🤖
-# Creator of RoxyBasicNeedBot & many automation tools ⚡
-# Skilled in Python, APIs, and Web Development
-#
-# © 2026 RoxyBasicNeedBot. All Rights Reserved.
-# ═══════════════════════════════════════════════════════════════
-
 services:
   - type: web
+    name: file-rename-4gb-bot
+    runtime: python
     plan: free
-    name: Roxy-test
-    env: python
     buildCommand: pip install -r requirements.txt
     startCommand: python3 bot.py
-    repo: https://github.com/RoxyBasicNeedBot/Roxy-test.git
-    branch: main
-    autoDeploy: false
+    healthCheckPath: /health
+    autoDeploy: true
     envVars:
       - key: PYTHON_VERSION
-        value: 3.11.9
-      - key: BOT_TOKEN
-        sync: false
+        value: "3.11.9"
       - key: API_ID
         sync: false
-
-# ═══════════════════════════════════════════════════════════════
-# 𝕽𝕺𝕏𝖄•𝔹𝕒𝕤𝕚𝕔ℕ𝕖𝕖𝕕𝔹𝕠𝕥 ⚡️
-# Created by: RoxyBasicNeedBot
-# GitHub: https://github.com/RoxyBasicNeedBot
-# Telegram: https://t.me/roxybasicneedbot1
-# Website: https://roxybasicneedbot.unaux.com/?i=1
-# YouTube: @roxybasicneedbot
-#
-# Portfolio: https://aratt.ai/@roxybasicneedbot
-#
-# Bot & Website Developer 🤖
-# Creator of RoxyBasicNeedBot & many automation tools ⚡
-# Skilled in Python, APIs, and Web Development
-#
-# © 2026 RoxyBasicNeedBot. All Rights Reserved.
-# ═══════════════════════════════════════════════════════════════
-
       - key: API_HASH
         sync: false
-      - key: FORCE_SUB
-        sync: false
-      - key: FORCE_SUB2
-        sync: false
-      - key: LOG_CHANNEL
-        sync: false
-      - key: DB_NAME
+      - key: BOT_TOKEN
         sync: false
       - key: DB_URL
         sync: false
-      - key: ROXY_PIC
-        sync: false
+      - key: DB_NAME
+        value: Roxy_Rename_Bot
       - key: ADMIN
         sync: false
+      - key: LOG_CHANNEL
+        value: "-1004379059015"
       - key: STRING_SESSION
         sync: false
-
-# ═══════════════════════════════════════════════════════════════
-# 𝕽𝕺𝕏𝖄•𝔹𝕒𝕤𝕚𝕔ℕ𝕖𝕖𝕕𝔹𝕠𝕥 ⚡️
-# Created by: RoxyBasicNeedBot
-# GitHub: https://github.com/RoxyBasicNeedBot
-# Telegram: https://t.me/roxybasicneedbot1
-# Website: https://roxybasicneedbot.unaux.com/?i=1
-# YouTube: @roxybasicneedbot
-#
-# Portfolio: https://aratt.ai/@roxybasicneedbot
-#
-# Bot & Website Developer 🤖
-# Creator of RoxyBasicNeedBot & many automation tools ⚡
-# Skilled in Python, APIs, and Web Development
-#
-# © 2026 RoxyBasicNeedBot. All Rights Reserved.
-# ═══════════════════════════════════════════════════════════════
+      - key: ROXY_PIC_API
+        sync: false
+      - key: TMDB_API_KEY
+        sync: false
+      - key: FORCE_SUB
+        value: "0"
+      - key: FORCE_SUB2
+        value: "0"
+      - key: FORCE_SUB_IMAGE
+        sync: false
+      - key: NSFW_API_KEY
+        sync: false
+      - key: NSFW_VIDEO_SIZE_LIMIT
+        value: "209715200"
+      - key: NSFW_FRAME_COUNT
+        value: "10"
+      - key: AUTO_DELETE_HOURS
+        value: "4"
+      - key: CONTACT_BOT
+        value: "@roaroic_bot"
+      # Transfer-performance tuning
+      - key: PYRO_WORKERS
+        value: "100"
+      - key: MAX_CONCURRENT_TRANSMISSIONS
+        value: "80"
